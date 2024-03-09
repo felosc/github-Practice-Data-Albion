@@ -1,0 +1,184 @@
+7769: T3_MAIN_AXE                                                      : Journeyman's Battleaxe
+7770: T4_MAIN_AXE                                                      : Adept's Battleaxe
+7771: T4_MAIN_AXE@1                                                    : Adept's Battleaxe
+7772: T4_MAIN_AXE@2                                                    : Adept's Battleaxe
+7773: T4_MAIN_AXE@3                                                    : Adept's Battleaxe
+7774: T4_MAIN_AXE@4                                                    : Adept's Battleaxe
+7775: T5_MAIN_AXE                                                      : Expert's Battleaxe
+7776: T5_MAIN_AXE@1                                                    : Expert's Battleaxe
+7777: T5_MAIN_AXE@2                                                    : Expert's Battleaxe
+7778: T5_MAIN_AXE@3                                                    : Expert's Battleaxe
+7779: T5_MAIN_AXE@4                                                    : Expert's Battleaxe
+7780: T6_MAIN_AXE                                                      : Master's Battleaxe
+7781: T6_MAIN_AXE@1                                                    : Master's Battleaxe
+7782: T6_MAIN_AXE@2                                                    : Master's Battleaxe
+7783: T6_MAIN_AXE@3                                                    : Master's Battleaxe
+7784: T6_MAIN_AXE@4                                                    : Master's Battleaxe
+7785: T7_MAIN_AXE                                                      : Grandmaster's Battleaxe
+7786: T7_MAIN_AXE@1                                                    : Grandmaster's Battleaxe
+7787: T7_MAIN_AXE@2                                                    : Grandmaster's Battleaxe
+7788: T7_MAIN_AXE@3                                                    : Grandmaster's Battleaxe
+7789: T7_MAIN_AXE@4                                                    : Grandmaster's Battleaxe
+7790: T8_MAIN_AXE                                                      : Elder's Battleaxe
+7791: T8_MAIN_AXE@1                                                    : Elder's Battleaxe
+7792: T8_MAIN_AXE@2                                                    : Elder's Battleaxe
+7793: T8_MAIN_AXE@3                                                    : Elder's Battleaxe
+7794: T8_MAIN_AXE@4                                                    : Elder's Battleaxe
+7795: T4_2H_AXE                                                        : Adept's Greataxe
+7796: T4_2H_AXE@1                                                      : Adept's Greataxe
+7797: T4_2H_AXE@2                                                      : Adept's Greataxe
+7798: T4_2H_AXE@3                                                      : Adept's Greataxe
+7799: T4_2H_AXE@4                                                      : Adept's Greataxe
+7800: T5_2H_AXE                                                        : Expert's Greataxe
+7801: T5_2H_AXE@1                                                      : Expert's Greataxe
+7802: T5_2H_AXE@2                                                      : Expert's Greataxe
+7803: T5_2H_AXE@3                                                      : Expert's Greataxe
+7804: T5_2H_AXE@4                                                      : Expert's Greataxe
+7805: T6_2H_AXE                                                        : Master's Greataxe
+7806: T6_2H_AXE@1                                                      : Master's Greataxe
+7807: T6_2H_AXE@2                                                      : Master's Greataxe
+7808: T6_2H_AXE@3                                                      : Master's Greataxe
+7809: T6_2H_AXE@4                                                      : Master's Greataxe
+7810: T7_2H_AXE                                                        : Grandmaster's Greataxe
+7811: T7_2H_AXE@1                                                      : Grandmaster's Greataxe
+7812: T7_2H_AXE@2                                                      : Grandmaster's Greataxe
+7813: T7_2H_AXE@3                                                      : Grandmaster's Greataxe
+7814: T7_2H_AXE@4                                                      : Grandmaster's Greataxe
+7815: T8_2H_AXE                                                        : The Hand of Khor
+7816: T8_2H_AXE@1                                                      : The Hand of Khor
+7817: T8_2H_AXE@2                                                      : The Hand of Khor
+7818: T8_2H_AXE@3                                                      : The Hand of Khor
+7819: T8_2H_AXE@4                                                      : The Hand of Khor
+7820: T4_2H_HALBERD                                                    : Adept's Halberd
+7821: T4_2H_HALBERD@1                                                  : Adept's Halberd
+7822: T4_2H_HALBERD@2                                                  : Adept's Halberd
+7823: T4_2H_HALBERD@3                                                  : Adept's Halberd
+7824: T4_2H_HALBERD@4                                                  : Adept's Halberd
+7825: T5_2H_HALBERD                                                    : Expert's Halberd
+7826: T5_2H_HALBERD@1                                                  : Expert's Halberd
+7827: T5_2H_HALBERD@2                                                  : Expert's Halberd
+7828: T5_2H_HALBERD@3                                                  : Expert's Halberd
+7829: T5_2H_HALBERD@4                                                  : Expert's Halberd
+7830: T6_2H_HALBERD                                                    : Master's Halberd
+7831: T6_2H_HALBERD@1                                                  : Master's Halberd
+7832: T6_2H_HALBERD@2                                                  : Master's Halberd
+7833: T6_2H_HALBERD@3                                                  : Master's Halberd
+7834: T6_2H_HALBERD@4                                                  : Master's Halberd
+7835: T7_2H_HALBERD                                                    : Grandmaster's Halberd
+7836: T7_2H_HALBERD@1                                                  : Grandmaster's Halberd
+7837: T7_2H_HALBERD@2                                                  : Grandmaster's Halberd
+7838: T7_2H_HALBERD@3                                                  : Grandmaster's Halberd
+7839: T7_2H_HALBERD@4                                                  : Grandmaster's Halberd
+7840: T8_2H_HALBERD                                                    : Elder's Halberd
+7841: T8_2H_HALBERD@1                                                  : Elder's Halberd
+7842: T8_2H_HALBERD@2                                                  : Elder's Halberd
+7843: T8_2H_HALBERD@3                                                  : Elder's Halberd
+7844: T8_2H_HALBERD@4                                                  : Elder's Halberd
+7845: T4_2H_HALBERD_MORGANA                                            : Adept's Carrioncaller
+7846: T4_2H_HALBERD_MORGANA@1                                          : Adept's Carrioncaller
+7847: T4_2H_HALBERD_MORGANA@2                                          : Adept's Carrioncaller
+7848: T4_2H_HALBERD_MORGANA@3                                          : Adept's Carrioncaller
+7849: T4_2H_HALBERD_MORGANA@4                                          : Adept's Carrioncaller
+7850: T5_2H_HALBERD_MORGANA                                            : Expert's Carrioncaller
+7851: T5_2H_HALBERD_MORGANA@1                                          : Expert's Carrioncaller
+7852: T5_2H_HALBERD_MORGANA@2                                          : Expert's Carrioncaller
+7853: T5_2H_HALBERD_MORGANA@3                                          : Expert's Carrioncaller
+7854: T5_2H_HALBERD_MORGANA@4                                          : Expert's Carrioncaller
+7855: T6_2H_HALBERD_MORGANA                                            : Master's Carrioncaller
+7856: T6_2H_HALBERD_MORGANA@1                                          : Master's Carrioncaller
+7857: T6_2H_HALBERD_MORGANA@2                                          : Master's Carrioncaller
+7858: T6_2H_HALBERD_MORGANA@3                                          : Master's Carrioncaller
+7859: T6_2H_HALBERD_MORGANA@4                                          : Master's Carrioncaller
+7860: T7_2H_HALBERD_MORGANA                                            : Grandmaster's Carrioncaller
+7861: T7_2H_HALBERD_MORGANA@1                                          : Grandmaster's Carrioncaller
+7862: T7_2H_HALBERD_MORGANA@2                                          : Grandmaster's Carrioncaller
+7863: T7_2H_HALBERD_MORGANA@3                                          : Grandmaster's Carrioncaller
+7864: T7_2H_HALBERD_MORGANA@4                                          : Grandmaster's Carrioncaller
+7865: T8_2H_HALBERD_MORGANA                                            : Elder's Carrioncaller
+7866: T8_2H_HALBERD_MORGANA@1                                          : Elder's Carrioncaller
+7867: T8_2H_HALBERD_MORGANA@2                                          : Elder's Carrioncaller
+7868: T8_2H_HALBERD_MORGANA@3                                          : Elder's Carrioncaller
+7869: T8_2H_HALBERD_MORGANA@4                                          : Elder's Carrioncaller
+7870: T4_2H_SCYTHE_HELL                                                : Adept's Infernal Scythe
+7871: T4_2H_SCYTHE_HELL@1                                              : Adept's Infernal Scythe
+7872: T4_2H_SCYTHE_HELL@2                                              : Adept's Infernal Scythe
+7873: T4_2H_SCYTHE_HELL@3                                              : Adept's Infernal Scythe
+7874: T4_2H_SCYTHE_HELL@4                                              : Adept's Infernal Scythe
+7875: T5_2H_SCYTHE_HELL                                                : Expert's Infernal Scythe
+7876: T5_2H_SCYTHE_HELL@1                                              : Expert's Infernal Scythe
+7877: T5_2H_SCYTHE_HELL@2                                              : Expert's Infernal Scythe
+7878: T5_2H_SCYTHE_HELL@3                                              : Expert's Infernal Scythe
+7879: T5_2H_SCYTHE_HELL@4                                              : Expert's Infernal Scythe
+7880: T6_2H_SCYTHE_HELL                                                : Master's Infernal Scythe
+7881: T6_2H_SCYTHE_HELL@1                                              : Master's Infernal Scythe
+7882: T6_2H_SCYTHE_HELL@2                                              : Master's Infernal Scythe
+7883: T6_2H_SCYTHE_HELL@3                                              : Master's Infernal Scythe
+7884: T6_2H_SCYTHE_HELL@4                                              : Master's Infernal Scythe
+7885: T7_2H_SCYTHE_HELL                                                : Grandmaster's Infernal Scythe
+7886: T7_2H_SCYTHE_HELL@1                                              : Grandmaster's Infernal Scythe
+7887: T7_2H_SCYTHE_HELL@2                                              : Grandmaster's Infernal Scythe
+7888: T7_2H_SCYTHE_HELL@3                                              : Grandmaster's Infernal Scythe
+7889: T7_2H_SCYTHE_HELL@4                                              : Grandmaster's Infernal Scythe
+7890: T8_2H_SCYTHE_HELL                                                : Elder's Infernal Scythe
+7891: T8_2H_SCYTHE_HELL@1                                              : Elder's Infernal Scythe
+7892: T8_2H_SCYTHE_HELL@2                                              : Elder's Infernal Scythe
+7893: T8_2H_SCYTHE_HELL@3                                              : Elder's Infernal Scythe
+7894: T8_2H_SCYTHE_HELL@4                                              : Elder's Infernal Scythe
+7895: T4_2H_DUALAXE_KEEPER                                             : Adept's Bear Paws
+7896: T4_2H_DUALAXE_KEEPER@1                                           : Adept's Bear Paws
+7897: T4_2H_DUALAXE_KEEPER@2                                           : Adept's Bear Paws
+7898: T4_2H_DUALAXE_KEEPER@3                                           : Adept's Bear Paws
+7899: T4_2H_DUALAXE_KEEPER@4                                           : Adept's Bear Paws
+7900: T5_2H_DUALAXE_KEEPER                                             : Expert's Bear Paws
+7901: T5_2H_DUALAXE_KEEPER@1                                           : Expert's Bear Paws
+7902: T5_2H_DUALAXE_KEEPER@2                                           : Expert's Bear Paws
+7903: T5_2H_DUALAXE_KEEPER@3                                           : Expert's Bear Paws
+7904: T5_2H_DUALAXE_KEEPER@4                                           : Expert's Bear Paws
+7905: T6_2H_DUALAXE_KEEPER                                             : Master's Bear Paws
+7906: T6_2H_DUALAXE_KEEPER@1                                           : Master's Bear Paws
+7907: T6_2H_DUALAXE_KEEPER@2                                           : Master's Bear Paws
+7908: T6_2H_DUALAXE_KEEPER@3                                           : Master's Bear Paws
+7909: T6_2H_DUALAXE_KEEPER@4                                           : Master's Bear Paws
+7910: T7_2H_DUALAXE_KEEPER                                             : Grandmaster's Bear Paws
+7911: T7_2H_DUALAXE_KEEPER@1                                           : Grandmaster's Bear Paws
+7912: T7_2H_DUALAXE_KEEPER@2                                           : Grandmaster's Bear Paws
+7913: T7_2H_DUALAXE_KEEPER@3                                           : Grandmaster's Bear Paws
+7914: T7_2H_DUALAXE_KEEPER@4                                           : Grandmaster's Bear Paws
+7915: T8_2H_DUALAXE_KEEPER                                             : Elder's Bear Paws
+7916: T8_2H_DUALAXE_KEEPER@1                                           : Elder's Bear Paws
+7917: T8_2H_DUALAXE_KEEPER@2                                           : Elder's Bear Paws
+7918: T8_2H_DUALAXE_KEEPER@3                                           : Elder's Bear Paws
+7919: T8_2H_DUALAXE_KEEPER@4                                           : Elder's Bear Paws
+7920: T4_2H_AXE_AVALON                                                 : Adept's Realmbreaker
+7921: T4_2H_AXE_AVALON@1                                               : Adept's Realmbreaker
+7922: T4_2H_AXE_AVALON@2                                               : Adept's Realmbreaker
+7923: T4_2H_AXE_AVALON@3                                               : Adept's Realmbreaker
+7924: T4_2H_AXE_AVALON@4                                               : Adept's Realmbreaker
+7925: T5_2H_AXE_AVALON                                                 : Expert's Realmbreaker
+7926: T5_2H_AXE_AVALON@1                                               : Expert's Realmbreaker
+7927: T5_2H_AXE_AVALON@2                                               : Expert's Realmbreaker
+7928: T5_2H_AXE_AVALON@3                                               : Expert's Realmbreaker
+7929: T5_2H_AXE_AVALON@4                                               : Expert's Realmbreaker
+7930: T6_2H_AXE_AVALON                                                 : Master's Realmbreaker
+7931: T6_2H_AXE_AVALON@1                                               : Master's Realmbreaker
+7932: T6_2H_AXE_AVALON@2                                               : Master's Realmbreaker
+7933: T6_2H_AXE_AVALON@3                                               : Master's Realmbreaker
+7934: T6_2H_AXE_AVALON@4                                               : Master's Realmbreaker
+7935: T7_2H_AXE_AVALON                                                 : Grandmaster's Realmbreaker
+7936: T7_2H_AXE_AVALON@1                                               : Grandmaster's Realmbreaker
+7937: T7_2H_AXE_AVALON@2                                               : Grandmaster's Realmbreaker
+7938: T7_2H_AXE_AVALON@3                                               : Grandmaster's Realmbreaker
+7939: T7_2H_AXE_AVALON@4                                               : Grandmaster's Realmbreaker
+7940: T8_2H_AXE_AVALON                                                 : Elder's Realmbreaker
+7941: T8_2H_AXE_AVALON@1                                               : Elder's Realmbreaker
+7942: T8_2H_AXE_AVALON@2                                               : Elder's Realmbreaker
+7943: T8_2H_AXE_AVALON@3                                               : Elder's Realmbreaker
+7944: T8_2H_AXE_AVALON@4                                               : Elder's Realmbreaker
+
+//location
+2000: Bridgewatch 
+1000: Lymhurst  
+4000: Fort Sterling 
+3004: Martlock
+0000: Thetford
+3003: Caerleon
