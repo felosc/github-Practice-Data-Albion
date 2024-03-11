@@ -31,16 +31,6 @@ const data = await fetch(consulta).then((response) => response.json());
     <title>Astro</title>
   </head>
   <body>
-    {
-      data.map((dat) => (
-        <>
-          <p>{dat.item_id}</p>
-          <p>{dat.city}</p>
-          <p>{dat.quality}</p>
-          <p>{dat.sell_price_min}</p>
-        </>
-      ))
-    }
     <Axelist />
   </body>
 </html>
