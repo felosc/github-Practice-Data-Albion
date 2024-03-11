@@ -40,11 +40,22 @@ const achas = [
 const calidades = [1, 2, 3, 4, 5, 6, 7, 8];
 ---
 
-<label for="achas">Hacha a Buscar</label>
-<select name="achas">
-  {achas.map((acha) => <option value={acha.id}>{acha.name}</option>)}
-</select>
-<label for="calidad">Calidad del Hacha</label>
-<select name="achas">
-  {calidades.map((calidad) => <option value={calidad}>{calidad}</option>)}
-</select>
+<form id="busquedaAchas">
+  <label for="tipo_de_achas">Hacha a Buscar</label>
+  <select name="tipo_de_achas" id="tipo_de_achas">
+    {achas.map((acha) => <option value={acha.id}>{acha.name}</option>)}
+  </select>
+  <label for="calidad_de_hachas">Calidad del Hacha</label>
+  <select name="calidad_de_hachas" id="calidad_de_hachas">
+    {calidades.map((calidad) => <option value={calidad}>{calidad}</option>)}
+  </select>
+  <button type="submit">Buscar Acha</button>
+</form>
+
+<script>
+  const form = document.querySelector("form");
+  form?.addEventListener("submit", (e) => {
+    e.preventDefault();
+    console.log(form);
+  });
+</script>
