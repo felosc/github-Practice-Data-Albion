@@ -58,9 +58,19 @@ const ubicacion = [
     {calidades.map((calidad) => <option value={calidad}>{calidad}</option>)}
   </select>
   <label for="ubicaciones">elige la ubicacion</label>
-  <select name="ubicaciones" id="ubicaciones">
-    {ubicacion.map((ciudad) => <option value={ciudad}>{ciudad}</option>)}
-  </select>
+  {
+    ubicacion.map((ciudad) => (
+      <>
+        <label for="ubicaciones">{ciudad}</label>
+        <input
+          type="checkbox"
+          name="ubicaciones"
+          id="ubicaciones"
+          value={ciudad}
+        />
+      </>
+    ))
+  }
   <button type="submit">Buscar Acha</button>
 </form>
 <p id="vista"></p>
@@ -73,7 +83,7 @@ const ubicacion = [
     const formdata = new FormData(form);
     const calidad = formdata.get("calidad_de_hachas");
     const arma = formdata.get("tipo_de_achas");
-    const ubicacion = formdata.get("ubicaciones");
+    const ubicacion = formdata.getAll("ubicaciones");
     const consulta =
       "https://west.albion-online-data.com/api/v2/stats/prices/" +
       arma +
@@ -81,12 +91,22 @@ const ubicacion = [
       ubicacion +
       "&qualities=" +
       calidad;
+    console.log(ubicacion);
     console.log(consulta);
     const respuesta = fetch(consulta)
       .then((response) => response.json())
       .then((datos) => {
-        console.log(datos[0]);
-        mostrar.innerText = JSON.stringify(datos[0]);
+        console.log(datos.length);
+        mostrar.innerText =
+          datos.city +
+          "--" +
+          datos.item_id +
+          "--" +
+          datos.quality +
+          "--" +
+          datos.sell_price_max +
+          "--" +
+          datos.buy_price_max;
       });
   });
 </script>

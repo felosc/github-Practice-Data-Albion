@@ -1,25 +1,5 @@
 ---
 import Axelist from "../components/Axelist.astro";
-const url_precio = "https://west.albion-online-data.com/api/v2/stats/prices/";
-const objeto_a_buscar = "T7_MAIN_AXE";
-const ubicacion = [
-  "Bridgewatch",
-  "Lymhurst",
-  "Fort Sterling",
-  "Martlock",
-  "Thetford",
-  "Caerleon",
-];
-//"https://west.albion-online-data.com/api/v2/stats/prices/T3_MAIN_AXE?locations=Caerleon,Bridgewatch&qualities=1"
-const calidad = "4";
-const consulta =
-  url_precio +
-  objeto_a_buscar +
-  "?locations=" +
-  ubicacion +
-  "&qualities=" +
-  calidad;
-const data = await fetch(consulta).then((response) => response.json());
 ---
 
 <html lang="en">
