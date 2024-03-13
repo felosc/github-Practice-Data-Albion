@@ -45,6 +45,8 @@ const ubicacion = [
   "Martlock",
   "Thetford",
   "Caerleon",
+  "Black Market",
+  "Brecilien Market ",
 ];
 ---
 
@@ -97,16 +99,19 @@ const ubicacion = [
       .then((response) => response.json())
       .then((datos) => {
         console.log(datos.length);
-        mostrar.innerText =
-          datos.city +
-          "--" +
-          datos.item_id +
-          "--" +
-          datos.quality +
-          "--" +
-          datos.sell_price_max +
-          "--" +
-          datos.buy_price_max;
+        mostrar.innerHTML = "";
+        datos.forEach((elemento) => {
+          mostrar.innerHTML += `
+        ${elemento.city} --
+        ${elemento.item_id} --
+        ${elemento.quality} --
+        ${elemento.sell_price_max} --
+        ${elemento.buy_price_max}
+        <br>`;
+        });
+      })
+      .catch((error) => {
+        console.error("Error en la consulta", error);
       });
   });
 </script>
