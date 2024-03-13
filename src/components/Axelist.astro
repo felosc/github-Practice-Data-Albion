@@ -1,4 +1,5 @@
 ---
+import "../style/gobla.css";
 const achas = [
   { id: "T3_MAIN_AXE", name: "Journeyman's Battleaxe" },
   { id: "T4_MAIN_AXE", name: "Adept's Battleaxe" },
@@ -75,13 +76,17 @@ const ubicacion = [
   }
   <button type="submit">Buscar Acha</button>
 </form>
-<p id="vista"></p>
+
+<div id="vista">
+  <h3 id="pueblo"></h3>
+</div>
 
 <script>
   const form = document.querySelector("form");
   form?.addEventListener("submit", (e) => {
     e.preventDefault();
     const mostrar = document.getElementById("vista");
+    const nombre_pueblo = document.getElementById("pueblo");
     const formdata = new FormData(form);
     const calidad = formdata.get("calidad_de_hachas");
     const arma = formdata.get("tipo_de_achas");
@@ -101,8 +106,8 @@ const ubicacion = [
         console.log(datos.length);
         mostrar.innerHTML = "";
         datos.forEach((elemento) => {
+          nombre_pueblo.innerHTML += `${elemento.city}`;
           mostrar.innerHTML += `
-        ${elemento.city} --
         ${elemento.item_id} --
         ${elemento.quality} --
         ${elemento.sell_price_max} --

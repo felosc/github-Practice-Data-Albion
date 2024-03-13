@@ -1,0 +1,17 @@
+#vista {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#vista p {
+    margin: 0;
+    padding: 5px;
+    border-bottom: 1px solid #eee;
+}
+
+#vista p:last-child {
+    border-bottom: none;
+}
