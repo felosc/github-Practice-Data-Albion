@@ -76,24 +76,15 @@ const ubicacion = [
   }
   <button type="submit">Buscar Acha</button>
 </form>
-<dir id="vista">
-  <p id="pueblo"></p>
-  <p id="id-item"></p>
-  <p id="nivel"></p>
-  <p id="max-vent-precio"></p>
-  <p id="max-compra-precio"></p>
-</dir>
+<br />
+<div class="container" id="container"></div>
 
 <script>
   const form = document.querySelector("form");
   form?.addEventListener("submit", (e) => {
     e.preventDefault();
     //etiquetas para mostrar datos
-    const mostrar = document.getElementById("id-item");
-    const nombre_pueblo = document.getElementById("pueblo");
-    const nivel_arma = document.getElementById("nivel");
-    const compra_max = document.getElementById("max-compra-precio");
-    const venta_max = document.getElementById("max-vent-precio");
+    const mostrar = document.getElementById("container");
     //obatencion de datos en la consulta
     const formdata = new FormData(form);
     const calidad = formdata.get("calidad_de_hachas");
@@ -118,11 +109,17 @@ const ubicacion = [
         mostrar.innerHTML = "";
         datos.forEach((elemento) => {
           //impresion de resultado de la consulta en html
-          nombre_pueblo.innerHTML = `${elemento.city}<br>`;
-          mostrar.innerHTML = `${elemento.item_id} <br>`;
-          nivel_arma.innerHTML = `${elemento.quality} <br>`;
-          venta_max.innerHTML = `${elemento.sell_price_max}<br>`;
-          compra_max.innerHTML = `${elemento.buy_price_max} <br>`;
+          mostrar.innerHTML += `
+ <div class="wrapper">
+   <div class="banner-image"> </div>
+   <h1>${elemento.item_id}</h1>
+   <p>${elemento.city}, <br/>
+     ${elemento.quality}.</p>
+  </div>
+  <div class="button-wrapper"> 
+  <button class="btn outline">${elemento.buy_price_max}</button>
+    <button class="btn fill">${elemento.sell_price_max}</button>
+  </div>`;
         });
       })
       .catch((error) => {
