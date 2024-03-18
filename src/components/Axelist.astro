@@ -38,7 +38,7 @@ const achas = [
   { id: "T7_2H_AXE_AVALON", name: "Grandmaster's Realmbreaker" },
   { id: "T8_2H_AXE_AVALON", name: "Elder's Realmbreaker" },
 ];
-const calidades = [1, 2, 3, 4, 5, 6, 7, 8];
+const calidades = [1, 2, 3, 4];
 const ubicacion = [
   "Bridgewatch",
   "Lymhurst",
@@ -49,6 +49,8 @@ const ubicacion = [
   "Black Market",
   "Brecilien Market ",
 ];
+//url render imagen
+//https://render.albiononline.com/v1/item/T6_2H_DUALAXE_KEEPER@4.png
 ---
 
 <form id="busquedaAchas">
@@ -77,14 +79,13 @@ const ubicacion = [
   <button type="submit">Buscar Acha</button>
 </form>
 <br />
-<div class="container" id="container"></div>
-
+<div id="mostrar-datos"></div>
 <script>
   const form = document.querySelector("form");
   form?.addEventListener("submit", (e) => {
     e.preventDefault();
     //etiquetas para mostrar datos
-    const mostrar = document.getElementById("container");
+    const mostrar = document.getElementById("mostrar-datos");
     //obatencion de datos en la consulta
     const formdata = new FormData(form);
     const calidad = formdata.get("calidad_de_hachas");
@@ -98,20 +99,20 @@ const ubicacion = [
       ubicacion +
       "&qualities=" +
       calidad;
-    //erificacion datos y consulta
-    console.log(ubicacion);
-    console.log(consulta);
     //se envia la consulta al api
     const respuesta = fetch(consulta)
       .then((response) => response.json())
       .then((datos) => {
-        console.log(datos.length);
+        console.log(datos);
         mostrar.innerHTML = "";
         datos.forEach((elemento) => {
           //impresion de resultado de la consulta en html
           mostrar.innerHTML += `
+          <div class="container" id="container">
  <div class="wrapper">
-   <div class="banner-image"> </div>
+   <div class="banner-image"><img
+  src="https://render.albiononline.com/v1/item/${elemento.item_id}@${elemento.quality}.png"
+  alt="acha"/></div>
    <h1>${elemento.item_id}</h1>
    <p>${elemento.city}, <br/>
      ${elemento.quality}.</p>
@@ -119,6 +120,7 @@ const ubicacion = [
   <div class="button-wrapper"> 
   <button class="btn outline">${elemento.buy_price_max}</button>
     <button class="btn fill">${elemento.sell_price_max}</button>
+  </div>
   </div>`;
         });
       })
