@@ -40,7 +40,7 @@ box-sizing: border-box;
     background-size: cover;
     border-radius: 12px;
     border:solid rgba(255, 255, 255, 0.255);
-    aspect-ratio: 1 / 1;
+    aspect-ratio: auto;
 }
 
 h1 {
