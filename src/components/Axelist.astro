@@ -54,37 +54,47 @@ const ubicacion = [
 
 <!--- poooorrr la democracia se un heldiver jajaja no lo juego pero me gusta el
 concepto ----->
-<form id="busquedaAchas" class="formulario-busqueda">
-  <div class="armas">
-    <label for="tipo_de_achas">Hacha a Buscar</label>
-    <select name="tipo_de_achas" id="tipo_de_achas">
-      {achas.map((acha) => <option value={acha.id}>{acha.name}</option>)}
-    </select>
-    <label for="calidad_de_hachas">Calidad del Hacha</label>
-    <select name="calidad_de_hachas" id="calidad_de_hachas">
-      {calidades.map((calidad) => <option value={calidad}>{calidad}</option>)}
-    </select>
-  </div>
-  <label for="ubicaciones" id="label_ubicacion">ELIJE LA UBICACION</label>
-  <div class="ciudades">
-    {
-      ubicacion.map((ciudad) => (
-        <>
-          <div class="ciudad">
-            <label for="ubicaciones">{ciudad}</label>
-            <input
-              type="checkbox"
-              name="ubicaciones"
-              id="ubicaciones"
-              value={ciudad}
-            />
-          </div>
-        </>
-      ))
-    }
-  </div>
-  <button type="submit">Buscar Acha</button>
-</form>
+<div class="contenedor_fomulario">
+  <form id="busquedaAchas" class="formulario-busqueda">
+    <div class="armas">
+      <div class="tipo_arma">
+        <label for="tipo_de_achas">Hacha a Buscar</label>
+        <select name="tipo_de_achas" id="tipo_de_achas">
+          {achas.map((acha) => <option value={acha.id}>{acha.name}</option>)}
+        </select>
+      </div>
+      <div class="calidad_arma">
+        <label for="calidad_de_hachas">Calidad del Hacha</label>
+        <select name="calidad_de_hachas" id="calidad_de_hachas">
+          {
+            calidades.map((calidad) => (
+              <option value={calidad}>{calidad}</option>
+            ))
+          }
+        </select>
+      </div>
+    </div>
+    <label for="ubicaciones" id="label_ubicacion">ELIJE LA UBICACION</label>
+    <div class="ciudades">
+      {
+        ubicacion.map((ciudad) => (
+          <>
+            <div class="ciudad">
+              <label for="ubicaciones">{ciudad}</label>
+              <input
+                type="checkbox"
+                name="ubicaciones"
+                id="ubicaciones"
+                value={ciudad}
+              />
+            </div>
+          </>
+        ))
+      }
+    </div>
+    <button type="submit">Buscar Acha</button>
+  </form>
+</div>
 <br />
 <div id="mostrar-datos"></div>
 <script>
