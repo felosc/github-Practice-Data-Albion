@@ -18,19 +18,16 @@ body{
     height: 100%vh;
     display: flex;
     flex-wrap: wrap;
-    background-color: tomato;
-    
+    justify-content: center;
 }
 
 .container {
     background-color: rgba(17, 25, 40, 0.25);
     border-radius: 12px;
-    padding: 0.5rem;
-    margin: 1rem;
+    padding: 5px;
+    margin: 5px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     text-align: center;
 
 }

@@ -131,12 +131,16 @@ concepto ----->
   src="https://render.albiononline.com/v1/item/${elemento.item_id}.png?quality=${elemento.quality}&locale=en"
   alt="acha"/></div>
    <h1>${elemento.item_id}</h1>
-   <p>${elemento.city}, <br/>
-     ${elemento.quality}.</p>
+   <p>venta maxima ${elemento.sell_price_max}, <br/>
+      venta minima ${elemento.sell_price_min}, <br/>
+      compra maxima ${elemento.buy_price_max}, <br/>
+      compra minima ${elemento.buy_price_min}, <br/>
+     .</p>
   </div>
   <div class="button-wrapper"> 
-  <button class="btn outline">compra ${elemento.buy_price_max}</button>
-    <button class="btn fill"> venta${elemento.sell_price_max}</button>
+  <button class="btn outline">${elemento.city}</button>
+    <button class="btn fill">${elemento.quality}</button>
+
   </div>
   </div>`;
         });
