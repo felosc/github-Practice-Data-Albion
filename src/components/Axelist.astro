@@ -51,8 +51,8 @@ const ubicacion = [
   "Caerleon",
   "Black Market",
 ];
-//url render imagen
-//https://render.albiononline.com/v1/item/T6_2H_DUALAXE_KEEPER@4.png
+//url renrender.albiononline.com/v1/item/T6_2H_DUALAXE_KEEPER@4.pngder imagen
+//https://
 ---
 
 <!--- poooorrr la democracia se un heldiver jajaja no lo juego pero me gusta el
@@ -120,14 +120,19 @@ concepto ----->
     const mostrar = document.getElementById("mostrar-datos");
     //obatencion de datos en la consulta
     const formdata = new FormData(form);
-    const encantamiento =formdata.get("encantamiento");
+    let encantamiento =formdata.get("encantamiento");
     const calidad = formdata.get("calidad_de_hachas");
     const arma = formdata.get("tipo_de_achas");
     const ubicacion = formdata.getAll("ubicaciones");
+    if(encantamiento[0] == 0){
+      encantamiento="";
+    }else{
+      encantamiento ="@"+encantamiento[0];
+    }
     //creacion de url con los datos de consulta
     const consulta =
       "https://west.albion-online-data.com/api/v2/stats/prices/" +
-      arma +"@"+encantamiento+
+      arma +encantamiento+
       "?locations=" +
       ubicacion +
       "&qualities=" +
