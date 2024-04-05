@@ -69,6 +69,16 @@ concepto ----->
         <p></p>
       </div>
       <div class="calidad_arma">
+        <label for="tir">Tier</label>
+        <select name="tier" id="tier">
+          {
+            tiers.map((tier) => (
+              <option value={tier}>{tier}</option>
+            ))
+          }
+        </select>
+      </div>
+      <div class="calidad_arma">
         <label for="calidad_de_hachas">Calidad del Hacha</label>
         <select name="calidad_de_hachas" id="calidad_de_hachas">
           {
