@@ -39,8 +39,8 @@ const achas = [
   { id: "T8_2H_AXE_AVALON", name: "Elder's Realmbreaker" },
 ];
 
-const encantamiento = [0,1, 2, 3, 4];
-const tier = [2, 3, 4, 5,6,7,8];
+const encantamientos = [0,1, 2, 3, 4];
+const tiers = [2, 3, 4, 5,6,7,8];
 const calidades = [1, 2, 3, 4, 5];
 const ubicacion = [
   "Bridgewatch",
@@ -57,6 +57,7 @@ const ubicacion = [
 
 <!--- poooorrr la democracia se un heldiver jajaja no lo juego pero me gusta el
 concepto ----->
+<p id="consulta"></p>
 <div class="contenedor_fomulario">
   <form id="busquedaAchas" class="formulario-busqueda">
     <div class="armas">
@@ -65,6 +66,7 @@ concepto ----->
         <select name="tipo_de_achas" id="tipo_de_achas">
           {achas.map((acha) => <option value={acha.id}>{acha.name}</option>)}
         </select>
+        <p></p>
       </div>
       <div class="calidad_arma">
         <label for="calidad_de_hachas">Calidad del Hacha</label>
@@ -74,6 +76,16 @@ concepto ----->
               <option value={calidad}>{calidad}</option>
             ))
           }
+        </select>
+      </div>
+      <div class="calidad_arma">
+        <label for="encantamiento">Encantamientos</label>
+        <select name="encantamiento" id="encantamiento">
+        {
+          encantamientos.map((encantamiento) => (
+            <option value={encantamiento}>{encantamiento}</option>
+          ))
+        }
         </select>
       </div>
     </div>
@@ -108,13 +120,14 @@ concepto ----->
     const mostrar = document.getElementById("mostrar-datos");
     //obatencion de datos en la consulta
     const formdata = new FormData(form);
+    const encantamiento =formdata.get("encantamiento");
     const calidad = formdata.get("calidad_de_hachas");
     const arma = formdata.get("tipo_de_achas");
     const ubicacion = formdata.getAll("ubicaciones");
     //creacion de url con los datos de consulta
     const consulta =
       "https://west.albion-online-data.com/api/v2/stats/prices/" +
-      arma +
+      arma +"@"+encantamiento+
       "?locations=" +
       ubicacion +
       "&qualities=" +
@@ -123,12 +136,14 @@ concepto ----->
     const respuesta = fetch(consulta)
       .then((response) => response.json())
       .then((datos) => {
+        document.getElementById("consulta").innerText=consulta;
         console.log(datos);
         mostrar.innerHTML = "";
         datos.forEach((elemento) => {
           if (elemento.sell_price_min > 0) {
             //impresion de resultado de la consulta en html
             mostrar.innerHTML += `
+            
             <div class="container" id="container">
    <div class="wrapper">
      <img class="banner-image"
