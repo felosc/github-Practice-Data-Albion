@@ -41,7 +41,7 @@ const achas = [
 
 const encantamientos = [0,1, 2, 3, 4];
 const tiers = [2, 3, 4, 5,6,7,8];
-const calidades = [1, 2, 3, 4, 5];
+const calidades = [0,1, 2, 3, 4, 5];
 const ubicacion = [
   "Bridgewatch",
   "Lymhurst",
@@ -166,8 +166,11 @@ concepto ----->
     alt="acha"/>
      <h1>${elemento.item_id}</h1>
      <p>
-        venta minima ${elemento.sell_price_min}, <br/>
-       .</p>
+        venta minima ${elemento.sell_price_min}
+        </p>
+       <p>
+        venta Fehca y hora <br/> ${elemento.sell_price_min_date}
+       </p>
     </div>
     <div class="button-wrapper"> 
     <button class="btn outline">${elemento.city}</button>
