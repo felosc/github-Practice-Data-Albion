@@ -128,6 +128,8 @@ concepto ----->
     e.preventDefault();
     //etiquetas para mostrar datos
     const mostrar = document.getElementById("mostrar-datos");
+    const armadata = document.getElementById("tipo_de_achas");
+    const armaname = armadata[armadata.selectedIndex].text;
     //obatencion de datos en la consulta
     const formdata = new FormData(form);
     let encantamiento =formdata.get("encantamiento");
@@ -152,7 +154,7 @@ concepto ----->
       .then((response) => response.json())
       .then((datos) => {
         document.getElementById("consulta").innerText=consulta;
-        console.log(datos);
+        //console.log(datos);
         mostrar.innerHTML = "";
         datos.forEach((elemento) => {
           if (elemento.sell_price_min > 0) {
@@ -164,12 +166,12 @@ concepto ----->
      <img class="banner-image"
     src="https://render.albiononline.com/v1/item/${elemento.item_id}.png?quality=${elemento.quality}&locale=en"
     alt="acha"/>
-     <h1>${elemento.item_id}</h1>
+     <h1>${armaname}</h1>
      <p>
-        venta minima ${elemento.sell_price_min}
+        Venta minima <br/>  ${elemento.sell_price_min}
         </p>
        <p>
-        venta Fehca y hora <br/> ${elemento.sell_price_min_date}
+        Fehca y hora <br/> ${elemento.sell_price_min_date}
        </p>
     </div>
     <div class="button-wrapper"> 
