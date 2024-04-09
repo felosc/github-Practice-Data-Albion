@@ -154,7 +154,7 @@ concepto ----->
       .then((response) => response.json())
       .then((datos) => {
         document.getElementById("consulta").innerText=consulta;
-        //console.log(datos);
+        console.log(datos);
         mostrar.innerHTML = "";
         datos.forEach((elemento) => {
           if (elemento.sell_price_min > 0) {
