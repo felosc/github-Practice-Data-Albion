@@ -87,6 +87,7 @@ concepto ----->
 <br />
 <div id="mostrar-datos"></div>
 <script>
+
 //Aquí tienes el JSON reorganizado para que los datos se agrupen por tier:
 const armasPorTier = [
   { tier: "T3", armas: [{ "id": "T3_MAIN_AXE", "name": "Journeyman's Battleaxe" }] },
@@ -141,6 +142,7 @@ const armasPorTier = [
     ]
   }
 ];
+const tierConsulta = [];
   // Selección del formulario
   const form = document.querySelector("form");
   // Evento de envío del formulario
@@ -167,10 +169,26 @@ const armasPorTier = [
       encantamiento = "@" + encantamiento[0];
     }
 
+                  //recorrer amras por tier
+function mostrarArmasPorTier(tier) {
+  document.getElementById("armas_tier").innerHTML ="";
+  const armasEnTier = armasPorTier.find(obj => obj.tier === tier);
+  if (armasEnTier) {
+    console.log(`Armas en el tier ${tier}:`);
+    armasEnTier.armas.forEach(arma => {
+      tierConsulta.push(arma.id);
+      document.getElementById("armas_tier").innerHTML += `<br>ID: ${arma.id}, Nombre: ${arma.name}<br>`;
+    });
+      console.log(tierConsulta);
+  } else {
+    console.log(`No se encontraron armas para el tier ${tier}.`);
+  }
+}
+mostrarArmasPorTier(tier);
     // Construcción de la URL de consulta
     const consulta =
       "https://west.albion-online-data.com/api/v2/stats/prices/" +
-      arma +
+      tierConsulta +
       encantamiento +
       "?locations=" +
       ubicacion +
@@ -182,21 +200,6 @@ const armasPorTier = [
       .then((response) => response.json())
       .then((datos) => {
         document.getElementById("consulta").innerText = consulta;
-
-                  //recorrer amras por tier
-function mostrarArmasPorTier(tier) {
-  const armasEnTier = armasPorTier.find(obj => obj.tier === tier);
-  if (armasEnTier) {
-    console.log(`Armas en el tier ${tier}:`);
-    armasEnTier.armas.forEach(arma => {
-      document.getElementById("armas_tier").innerHTML += `<br>ID: ${arma.id}, Nombre: ${arma.name}<br>`;
-      console.log(`ID: ${arma.id}, Nombre: ${arma.name}`);
-    });
-  } else {
-    console.log(`No se encontraron armas para el tier ${tier}.`);
-  }
-}
-mostrarArmasPorTier(tier);
 
         mostrar.innerHTML = "";
         // Itera sobre los datos recibidos y los muestra en el HTML
@@ -221,6 +224,6 @@ mostrarArmasPorTier(tier);
       .catch((error) => {
         console.error("Error en la consulta", error);
       })
-      .finally(() => console.log('Búsqueda Terminada'));
+      .finally(() => tierConsulta.splice(0, tierConsulta.length),console.log('Búsqueda Terminada'));
   });
 </script>
