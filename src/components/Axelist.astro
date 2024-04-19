@@ -174,10 +174,8 @@ function mostrarArmasPorTier(tier) {
   document.getElementById("armas_tier").innerHTML ="";
   const armasEnTier = armasPorTier.find(obj => obj.tier === tier);
   if (armasEnTier) {
-    console.log(`Armas en el tier ${tier}:`);
     armasEnTier.armas.forEach(arma => {
-      tierConsulta.push(arma.id);
-      document.getElementById("armas_tier").innerHTML += `<br>ID: ${arma.id}, Nombre: ${arma.name}<br>`;
+      tierConsulta.push(arma.id+encantamiento);
     });
       console.log(tierConsulta);
   } else {
@@ -189,7 +187,6 @@ mostrarArmasPorTier(tier);
     const consulta =
       "https://west.albion-online-data.com/api/v2/stats/prices/" +
       tierConsulta +
-      encantamiento +
       "?locations=" +
       ubicacion +
       "&qualities=" +
