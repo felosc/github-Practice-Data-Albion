@@ -2,9 +2,9 @@
 import "../style/gobla.css";
 import achas from "../datas/armas.json";
 
-const encantamientos = [0,1, 2, 3, 4];
-const tiers = [2, 3, 4, 5,6,7,8];
-const calidades = [0,1, 2, 3, 4, 5];
+const encantamientos = [0, 1, 2, 3, 4];
+const tiers = [2, 3, 4, 5, 6, 7, 8];
+const calidades = [0, 1, 2, 3, 4, 5];
 const ubicacion = [
   "Bridgewatch",
   "Lymhurst",
@@ -14,6 +14,12 @@ const ubicacion = [
   "Caerleon",
   "Black Market",
 ];
+//marlock = #7266ba;
+//bridgewacht = #f76397;
+//Lymhusrt = #fa0;
+//fort = #00b19d;
+//theforld = #3bafda;
+//caerleon = #343a40;
 //url renrender.albiononline.com/v1/item/T6_2H_DUALAXE_KEEPER@4.pngder imagen
 //https://
 ---
@@ -27,19 +33,12 @@ concepto ----->
     <div class="armas">
       <div class="tipo_arma">
         <label for="tipo_de_achas">Hacha a Buscar</label>
-        <select name="tipo_de_achas" id="tipo_de_achas">
-          {achas.map((acha) => <option value={acha.id}>{acha.name}</option>)}
-        </select>
         <p></p>
       </div>
       <div class="calidad_arma">
         <label for="tir">Tier</label>
         <select name="tier" id="tier">
-          {
-            tiers.map((tier) => (
-              <option value={"T"+tier}>{tier}</option>
-            ))
-          }
+          {tiers.map((tier) => <option value={"T" + tier}>{tier}</option>)}
         </select>
       </div>
       <div class="calidad_arma">
@@ -55,11 +54,11 @@ concepto ----->
       <div class="calidad_arma">
         <label for="encantamiento">Encantamientos</label>
         <select name="encantamiento" id="encantamiento">
-        {
-          encantamientos.map((encantamiento) => (
-            <option value={encantamiento}>{encantamiento}</option>
-          ))
-        }
+          {
+            encantamientos.map((encantamiento) => (
+              <option value={encantamiento}>{encantamiento}</option>
+            ))
+          }
         </select>
       </div>
     </div>
@@ -87,62 +86,74 @@ concepto ----->
 <br />
 <div id="mostrar-datos"></div>
 <script>
-
-//Aquí tienes el JSON reorganizado para que los datos se agrupen por tier:
-const armasPorTier = [
-  { tier: "T3", armas: [{ "id": "T3_MAIN_AXE", "name": "Journeyman's Battleaxe" }] },
-  { tier: "T4", armas: [
-      { "id": "T4_MAIN_AXE", "name": "Adept's Battleaxe" },
-      { "id": "T4_2H_AXE", "name": "Adept's Greataxe" },
-      { "id": "T4_2H_HALBERD", "name": "Adept's Halberd" },
-      { "id": "T4_2H_HALBERD_MORGANA", "name": "Adept's Carrioncaller" },
-      { "id": "T4_2H_SCYTHE_HELL", "name": "Adept's Infernal Scythe" },
-      { "id": "T4_2H_DUALAXE_KEEPER", "name": "Adept's Bear Paws" },
-      { "id": "T4_2H_AXE_AVALON", "name": "Adept's Realmbreaker" }
-    ]
-  },
-  { tier: "T5", armas: [
-      { "id": "T5_MAIN_AXE", "name": "Expert's Battleaxe" },
-      { "id": "T5_2H_AXE", "name": "Expert's Greataxe" },
-      { "id": "T5_2H_HALBERD", "name": "Expert's Halberd" },
-      { "id": "T5_2H_HALBERD_MORGANA", "name": "Expert's Carrioncaller" },
-      { "id": "T5_2H_SCYTHE_HELL", "name": "Expert's Infernal Scythe" },
-      { "id": "T5_2H_DUALAXE_KEEPER", "name": "Expert's Bear Paws" },
-      { "id": "T5_2H_AXE_AVALON", "name": "Expert's Realmbreaker" }
-    ]
-  },
-  { tier: "T6", armas: [
-      { "id": "T6_MAIN_AXE", "name": "Master's Battleaxe" },
-      { "id": "T6_2H_AXE", "name": "Master's Greataxe" },
-      { "id": "T6_2H_HALBERD", "name": "Master's Halberd" },
-      { "id": "T6_2H_HALBERD_MORGANA", "name": "Master's Carrioncaller" },
-      { "id": "T6_2H_SCYTHE_HELL", "name": "Master's Infernal Scythe" },
-      { "id": "T6_2H_DUALAXE_KEEPER", "name": "Master's Bear Paws" },
-      { "id": "T6_2H_AXE_AVALON", "name": "Master's Realmbreaker" }
-    ]
-  },
-  { tier: "T7", armas: [
-      { "id": "T7_MAIN_AXE", "name": "Grandmaster's Battleaxe" },
-      { "id": "T7_2H_AXE", "name": "Grandmaster's Greataxe" },
-      { "id": "T7_2H_HALBERD", "name": "Grandmaster's Halberd" },
-      { "id": "T7_2H_HALBERD_MORGANA", "name": "Grandmaster's Carrioncaller" },
-      { "id": "T7_2H_SCYTHE_HELL", "name": "Grandmaster's Infernal Scythe" },
-      { "id": "T7_2H_DUALAXE_KEEPER", "name": "Grandmaster's Bear Paws" },
-      { "id": "T7_2H_AXE_AVALON", "name": "Grandmaster's Realmbreaker" }
-    ]
-  },
-  { tier: "T8", armas: [
-      { "id": "T8_MAIN_AXE", "name": "Elder's Battleaxe" },
-      { "id": "T8_2H_AXE", "name": "The Hand of Khor" },
-      { "id": "T8_2H_HALBERD", "name": "Elder's Halberd" },
-      { "id": "T8_2H_HALBERD_MORGANA", "name": "Elder's Carrioncaller" },
-      { "id": "T8_2H_SCYTHE_HELL", "name": "Elder's Infernal Scythe" },
-      { "id": "T8_2H_DUALAXE_KEEPER", "name": "Elder's Bear Paws" },
-      { "id": "T8_2H_AXE_AVALON", "name": "Elder's Realmbreaker" }
-    ]
-  }
-];
-const tierConsulta = [];
+  //Aquí tienes el JSON reorganizado para que los datos se agrupen por tier:
+  const armasPorTier = [
+    {
+      tier: "T3",
+      armas: [{ id: "T3_MAIN_AXE", name: "Journeyman's Battleaxe" }],
+    },
+    {
+      tier: "T4",
+      armas: [
+        { id: "T4_MAIN_AXE", name: "Adept's Battleaxe" },
+        { id: "T4_2H_AXE", name: "Adept's Greataxe" },
+        { id: "T4_2H_HALBERD", name: "Adept's Halberd" },
+        { id: "T4_2H_HALBERD_MORGANA", name: "Adept's Carrioncaller" },
+        { id: "T4_2H_SCYTHE_HELL", name: "Adept's Infernal Scythe" },
+        { id: "T4_2H_DUALAXE_KEEPER", name: "Adept's Bear Paws" },
+        { id: "T4_2H_AXE_AVALON", name: "Adept's Realmbreaker" },
+      ],
+    },
+    {
+      tier: "T5",
+      armas: [
+        { id: "T5_MAIN_AXE", name: "Expert's Battleaxe" },
+        { id: "T5_2H_AXE", name: "Expert's Greataxe" },
+        { id: "T5_2H_HALBERD", name: "Expert's Halberd" },
+        { id: "T5_2H_HALBERD_MORGANA", name: "Expert's Carrioncaller" },
+        { id: "T5_2H_SCYTHE_HELL", name: "Expert's Infernal Scythe" },
+        { id: "T5_2H_DUALAXE_KEEPER", name: "Expert's Bear Paws" },
+        { id: "T5_2H_AXE_AVALON", name: "Expert's Realmbreaker" },
+      ],
+    },
+    {
+      tier: "T6",
+      armas: [
+        { id: "T6_MAIN_AXE", name: "Master's Battleaxe" },
+        { id: "T6_2H_AXE", name: "Master's Greataxe" },
+        { id: "T6_2H_HALBERD", name: "Master's Halberd" },
+        { id: "T6_2H_HALBERD_MORGANA", name: "Master's Carrioncaller" },
+        { id: "T6_2H_SCYTHE_HELL", name: "Master's Infernal Scythe" },
+        { id: "T6_2H_DUALAXE_KEEPER", name: "Master's Bear Paws" },
+        { id: "T6_2H_AXE_AVALON", name: "Master's Realmbreaker" },
+      ],
+    },
+    {
+      tier: "T7",
+      armas: [
+        { id: "T7_MAIN_AXE", name: "Grandmaster's Battleaxe" },
+        { id: "T7_2H_AXE", name: "Grandmaster's Greataxe" },
+        { id: "T7_2H_HALBERD", name: "Grandmaster's Halberd" },
+        { id: "T7_2H_HALBERD_MORGANA", name: "Grandmaster's Carrioncaller" },
+        { id: "T7_2H_SCYTHE_HELL", name: "Grandmaster's Infernal Scythe" },
+        { id: "T7_2H_DUALAXE_KEEPER", name: "Grandmaster's Bear Paws" },
+        { id: "T7_2H_AXE_AVALON", name: "Grandmaster's Realmbreaker" },
+      ],
+    },
+    {
+      tier: "T8",
+      armas: [
+        { id: "T8_MAIN_AXE", name: "Elder's Battleaxe" },
+        { id: "T8_2H_AXE", name: "The Hand of Khor" },
+        { id: "T8_2H_HALBERD", name: "Elder's Halberd" },
+        { id: "T8_2H_HALBERD_MORGANA", name: "Elder's Carrioncaller" },
+        { id: "T8_2H_SCYTHE_HELL", name: "Elder's Infernal Scythe" },
+        { id: "T8_2H_DUALAXE_KEEPER", name: "Elder's Bear Paws" },
+        { id: "T8_2H_AXE_AVALON", name: "Elder's Realmbreaker" },
+      ],
+    },
+  ];
+  const tierConsulta = [];
   // Selección del formulario
   const form = document.querySelector("form");
   // Evento de envío del formulario
@@ -151,14 +162,14 @@ const tierConsulta = [];
 
     // Elementos HTML donde se mostrarán los datos
     const mostrar = document.getElementById("mostrar-datos");
-    const armadata = document.getElementById("tipo_de_achas");
-    const armaname = armadata[armadata.selectedIndex].text;
+
+    //const armaname = armadata[armadata.selectedIndex].text;
 
     // Obtiene los datos del formulario
     const formdata = new FormData(form);
     let encantamiento = formdata.get("encantamiento");
     const calidad = formdata.get("calidad_de_hachas");
-    const arma = formdata.get("tipo_de_achas");
+
     const tier = formdata.get("tier");
     const ubicacion = formdata.getAll("ubicaciones");
 
@@ -169,20 +180,20 @@ const tierConsulta = [];
       encantamiento = "@" + encantamiento[0];
     }
 
-                  //recorrer amras por tier
-function mostrarArmasPorTier(tier) {
-  document.getElementById("armas_tier").innerHTML ="";
-  const armasEnTier = armasPorTier.find(obj => obj.tier === tier);
-  if (armasEnTier) {
-    armasEnTier.armas.forEach(arma => {
-      tierConsulta.push(arma.id+encantamiento);
-    });
-      console.log(tierConsulta);
-  } else {
-    console.log(`No se encontraron armas para el tier ${tier}.`);
-  }
-}
-mostrarArmasPorTier(tier);
+    //recorrer amras por tier
+    function mostrarArmasPorTier(tier) {
+      document.getElementById("armas_tier").innerHTML = "";
+      const armasEnTier = armasPorTier.find((obj) => obj.tier === tier);
+      if (armasEnTier) {
+        armasEnTier.armas.forEach((arma) => {
+          tierConsulta.push(arma.id + encantamiento);
+        });
+        console.log(tierConsulta);
+      } else {
+        console.log(`No se encontraron armas para el tier ${tier}.`);
+      }
+    }
+    mostrarArmasPorTier(tier);
     // Construcción de la URL de consulta
     const consulta =
       "https://west.albion-online-data.com/api/v2/stats/prices/" +
@@ -206,7 +217,7 @@ mostrarArmasPorTier(tier);
               <div class="container" id="container">
                 <div class="wrapper">
                   <img class="banner-image" src="https://render.albiononline.com/v1/item/${elemento.item_id}.png?quality=${elemento.quality}&locale=en" alt="acha"/>
-                  <h1>${armaname}</h1>
+                  <h1>${elemento.item_id}</h1>
                   <p>Venta minima <br/>  ${elemento.sell_price_min}</p>
                   <p>Fehca y hora <br/> ${elemento.sell_price_min_date}</p>
                 </div>
@@ -221,6 +232,6 @@ mostrarArmasPorTier(tier);
       .catch((error) => {
         console.error("Error en la consulta", error);
       })
-      .finally(() => tierConsulta.splice(0, tierConsulta.length),console.log('Búsqueda Terminada'));
+      .finally(() => tierConsulta.splice(0, tierConsulta.length));
   });
 </script>
