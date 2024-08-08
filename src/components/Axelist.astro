@@ -84,7 +84,6 @@ concepto ----->
   </form>
 </div>
 <br />
-<div id="mostrar-datos"></div>
 <script>
   //Aquí tienes el JSON reorganizado para que los datos se agrupen por tier:
   const armasPorTier = [
@@ -214,18 +213,15 @@ concepto ----->
         datos.forEach((elemento) => {
           if (elemento.sell_price_min > 0) {
             mostrar.innerHTML += `
-              <div class="container" id="container">
-                <div class="wrapper">
-                  <img class="banner-image" src="https://render.albiononline.com/v1/item/${elemento.item_id}.png?quality=${elemento.quality}&locale=en" alt="acha"/>
-                  <h1>${elemento.item_id}</h1>
-                  <p>Venta minima <br/>  ${elemento.sell_price_min}</p>
-                  <p>Fehca y hora <br/> ${elemento.sell_price_min_date}</p>
-                </div>
-                <div class="button-wrapper"> 
-                  <button class="btn outline">${elemento.city}</button>
-                  <button class="btn fill">${elemento.quality}</button>
-                </div>
-              </div>`;
+		<tr>
+			<td>${elemento.quality}</td>
+			<td>${elemento.item_id}</td>
+			<td>${elemento.sell_price_min}</td>
+			<td>${elemento.sell_price_min_date}</td>
+      <td>${elemento.city}</td>
+      <td><img class="imagen" src="https://render.albiononline.com/v1/item/${elemento.item_id}.png?quality=${elemento.quality}&locale=en" alt="imagen_de_acha" width="70" height="70"/></td>
+		</tr>
+              `;
           }
         });
       })

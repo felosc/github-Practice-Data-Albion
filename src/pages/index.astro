@@ -11,6 +11,20 @@ import Axelist from "../components/Axelist.astro";
     <title>Astro</title>
   </head>
   <body>
-    <Axelist />
+    <table class="container">
+      <thead>
+        <tr>
+          <th><h1>N°</h1></th>
+          <th><h1>Name</h1></th>
+          <th><h1>VentaMinima</h1></th>
+          <th><h1>fehca-hora</h1></th>
+          <th><h1>Ubicacion</h1></th>
+          <th><h1>__</h1></th>
+        </tr>
+      </thead>
+      <tbody id="mostrar-datos">
+        <Axelist />
+      </tbody>
+    </table>
   </body>
 </html>
