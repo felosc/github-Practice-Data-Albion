@@ -37,23 +37,22 @@ p {
 
 .contenedor_fomulario{
         margin-top: 5rem;
+            margin-left: 20vw;
+                margin-right: 20vw;
+                            font-weight: bold;
+                                font-size: 1em;
+                                text-align: center;
+                                color: #10a3e7;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                padding: 0.2rem;
+                align-items: center;
+                justify-content: center;
+                background-color: #101725;
 }
 
-.formulario-busqueda{
-    margin-left: 20vw;
-    margin-right: 20vw;
-    color: #fff;
-    text-align: center;
-    box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
-    display: flex;
-    flex-direction: column;
-    padding: 0.2rem;
-    align-items: center;
-    justify-content: center;
-    border: solid;
-    border-radius: 0.2rem;
-    border-color: black;
-}
+
 
 .armas{
     display: flex;
