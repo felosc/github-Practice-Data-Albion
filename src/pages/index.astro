@@ -1,5 +1,6 @@
 ---
 import Axelist from "../components/Axelist.astro";
+import Navbar from "../components/navbar.astro";
 ---
 
 <html lang="en">
@@ -11,12 +12,7 @@ import Axelist from "../components/Axelist.astro";
     <title>Astro</title>
   </head>
   <body>
-    <table class="container">
-      <thead>
-      </thead>
-      <tbody id="mostrar-datos">
+    <Navbar/>
         <Axelist />
-      </tbody>
-    </table>
   </body>
 </html>

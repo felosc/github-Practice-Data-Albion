@@ -13,14 +13,16 @@ import "../style/gobla.css";
 concepto ----->
 <h1>Lista de Libros</h1>
 
-<ul>
+<ul id="list-boocks">
   {books.map((book) => (
-    <li key={book.id}>
+    <li id="li-boocks" key={book.id}>
+      <div>
+      <img src={book.formats["image/jpeg"]} alt="Cover Image" width="120px" height="220px" />
       <h3>{book.title}</h3>
       <p>Autor: {book.authors[0].name}</p>
       <p>Idioma: {book.languages}</p>
-      <p>Temas: {book.bookshelves}</p>
-      <img src={book.formats["image/jpeg"]} alt="Cover Image" />
+      <p>Temas: {book.bookshelves[1]}</p>
+      </div>
     </li>
   ))}
 </ul>
