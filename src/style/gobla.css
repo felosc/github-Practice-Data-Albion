@@ -1,13 +1,16 @@
 *{
 box-sizing: border-box;
+margin: 0;
+padding: 0;
 }
 
 
+section{
+    background-image: url(https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExdTh1dXU5NHl5YW83dnFmc2ljeHRoMGtkNHJsZDJ3N3Mwc2ZmbjljOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/35NGT2lm6mfHlNAkMu/giphy.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100dvh;
 
-body{
-    margin: 0;
-    padding: 0;
-    background-color: #19293a;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
@@ -48,6 +51,8 @@ p {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
+
+
 
 
 

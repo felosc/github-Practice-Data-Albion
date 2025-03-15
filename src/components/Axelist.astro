@@ -15,7 +15,7 @@ concepto ----->
 
 <ul id="list-boocks">
   {books.map((book) => (
-    <li id="li-boocks" key={book.id}>
+    <li id="li-boocks" dat-key={book.id}>
       <div>
       <img src={book.formats["image/jpeg"]} alt="Cover Image" width="120px" height="220px" />
       <h3>{book.title}</h3>
